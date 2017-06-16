@@ -1,4 +1,5 @@
 
+<%@page import="cl.accesodato.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 
@@ -9,18 +10,7 @@
     </head>
     <body>
         <%
-            Connection con=null;
-            String driver="com.mysql.jdbc.Driver";
-            String url="jdbc:mysql://localhost:3306/INACAP";
-            String usuario="root";
-            String clave="";
-            try{
-                Class.forName(driver);
-                con=DriverManager.getConnection(url,usuario,clave);
-                out.println("USUARIO CONECTADO");
-            }catch(Exception ex){
-                out.println("ERROR DE CONEXION"+ex.getMessage());
-            }
+           Conexion con=new Conexion();
             %>
     </body>
 </html>
