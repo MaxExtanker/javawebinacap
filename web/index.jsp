@@ -1,4 +1,5 @@
 
+<%@page import="cl.negocio.Course"%>
 <%@page import="cl.accesodato.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
@@ -10,7 +11,13 @@
     </head>
     <body>
         <%
-           Conexion con=new Conexion();
+           Course cor=new Course();
+           cor.setNAME("programacion 10");
+           cor.setDESCRIPTION("taller avanzado");
+           cor.setSTATE("activo");
+           cor.save();
+
+
             %>
     </body>
 </html>
